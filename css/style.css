@@ -14,8 +14,9 @@
 }
 
 body {
+  position: relative;
   display: grid;
-  place-content: center;
+  place-items: center;
   min-height: 100vh;
   padding: 0px 20px;
   font-family: "Inter", sans-serif;
@@ -55,14 +56,15 @@ picture img {
 
 .infoMainContainer {
   display: grid;
-  place-content: center;
+  place-items: center;
   width: 100%;
   padding: 32px;
 }
 
-.infoContainer {
+.infoHeaderContainer {
+  display: grid;
+  place-items: center;
   width: 100%;
-  max-width: 355px;
 }
 
 h1 {
@@ -79,6 +81,7 @@ h1,
 }
 
 p {
+  max-width: 355px;
   margin: 16px 0px;
   line-height: 24px;
   color: var(--neutral-primary);
@@ -87,8 +90,9 @@ p {
 .statsMainContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   justify-content: center;
+  gap: 30px;
+  max-width: 355px;
   margin-top: 40px;
 }
 
@@ -110,6 +114,8 @@ p {
 }
 
 .attribution {
+  position: absolute;
+  bottom: 0;
   margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
@@ -141,7 +147,7 @@ p {
   }
 
   .infoMainContainer {
-    justify-content: start;
+    justify-items: start;
     width: 570px;
     height: 100%;
     padding: 60px 70px;
@@ -151,5 +157,13 @@ p {
     height: 300px;
     display: grid;
     align-content: space-between;
+  }
+
+  .infoHeaderContainer {
+    justify-items: start;
+  }
+
+  h1 {
+    font-size: 36px;
   }
 }
